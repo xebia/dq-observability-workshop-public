@@ -1,0 +1,29 @@
+# Lab 1 Solution — dbt Tests
+#
+# Copy to: dbt_project/models/marts/schema.yml
+#
+# Issues caught:
+#   1. not_null on order_id          → catches the null order_id (row 4)
+#   2. unique on order_id            → catches the duplicate order_id 3 (rows 3 & 10)
+#   3. accepted_values on status     → catches 'refunded' (row 6)
+#   4. relationships on customer_id  → catches customer_id 99 (row 7)
+
+models:
+  - name: orders
+    columns:
+
+      - name: order_id
+        tests:
+          - not_null
+          - unique
+
+      - name: status
+        tests:
+          - accepted_values:
+              values: ['placed', 'shipped', 'completed', 'returned']
+
+      - name: customer_id
+        tests:
+          - relationships:
+              to: ref('customers')
+              field: customer_id

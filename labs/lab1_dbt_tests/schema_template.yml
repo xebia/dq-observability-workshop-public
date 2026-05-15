@@ -1,0 +1,41 @@
+# Lab 1: dbt Tests — Fill in the Blanks
+# =========================================================
+# Your task: write tests that catch all 4 quality issues
+# hidden in the orders data.
+#
+# When done, copy this file to:
+#   dbt_project/models/marts/schema.yml
+#
+# Then run from dbt_project/:
+#   dbt test --select orders
+#
+# Hint: open seeds/raw_orders.csv and read the data.
+# =========================================================
+
+models:
+  - name: orders
+    columns:
+
+      - name: order_id
+        tests:
+          - ___________     # Issue 1: some order_ids are null.
+                            # Which built-in test catches null values?
+
+          - ___________     # Issue 2: order_id 3 appears twice.
+                            # Which built-in test catches duplicates?
+
+      - name: status
+        tests:
+          - accepted_values:
+              values:
+                - ___________   # Issue 3: one row has an invalid status.
+                - ___________   # Valid statuses are: placed, shipped,
+                - ___________   #   completed, returned.
+                - ___________   # (do NOT include 'refunded')
+
+      - name: customer_id
+        tests:
+          - relationships:
+              to: ___________   # Issue 4: one order references a customer
+              field: ___________  # that doesn't exist. Which model holds
+                                  # valid customers? What field to join on?

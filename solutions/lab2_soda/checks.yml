@@ -1,0 +1,26 @@
+# Lab 2 Solution — Soda Checks
+#
+# Run from repo root:
+#   soda scan -d workshop \
+#     -c labs/lab2_soda/configuration.yml \
+#     solutions/lab2_soda/checks.yml
+#
+# Expected results on the unmodified dataset:
+#   PASS  orders table has expected row count   (12 rows, between 5 and 1000)
+#   PASS  orders data is not stale              (max created_at = 2025-05-13, within 60 days)
+#   FAIL  order amounts within expected range   (row 11 has amount 9999.00)
+#   FAIL  no duplicate order IDs               (order_id 3 appears twice)
+
+checks for main.orders:
+
+  - row_count between 5 and 1000:
+      name: "orders table has expected row count"
+
+  - freshness(created_at) < 60d:
+      name: "orders data is not stale"
+
+  - values in (amount) between 0 and 1000:
+      name: "order amounts within expected range"
+
+  - duplicate_count(order_id) == 0:
+      name: "no duplicate order IDs"

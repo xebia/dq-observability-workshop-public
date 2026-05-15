@@ -1,0 +1,13 @@
+order_id,customer_id,status,amount,created_at
+1,1,completed,50.00,2025-05-01
+2,2,placed,120.00,2025-05-10
+3,3,shipped,75.00,2025-05-08
+,2,completed,30.00,2025-05-03
+5,1,placed,200.00,2025-05-12
+6,4,refunded,90.00,2025-05-09
+7,99,completed,45.00,2025-05-07
+8,5,shipped,180.00,2025-05-11
+9,2,completed,60.00,2025-05-06
+3,3,placed,75.00,2025-05-08
+11,1,completed,9999.00,2025-05-13
+12,3,completed,95.00,2025-04-01

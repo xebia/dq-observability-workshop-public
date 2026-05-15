@@ -1,0 +1,37 @@
+# Lab 2: Soda Checks — Fill in the Blanks
+# =========================================================
+# Your task: write checks that cover freshness, volume,
+# and distribution (3 of the 5 observability pillars).
+#
+# Run from the repo root:
+#   soda scan -d workshop \
+#     -c labs/lab2_soda/configuration.yml \
+#     labs/lab2_soda/checks_template.yml
+#
+# After checks pass: deliberately break one.
+# Delete 3 rows from dbt_project/seeds/raw_orders.csv,
+# then run: dbt seed && dbt run, then scan again.
+# =========================================================
+
+checks for main.orders:
+
+  # VOLUME PILLAR
+  # The orders table should have between 5 and 1000 rows.
+  - row_count between ___ and ___:
+      name: "orders table has expected row count"
+
+  # FRESHNESS PILLAR
+  # The sample data goes back to April 2025 (~45 days ago).
+  # Set a threshold that the current data would pass.
+  - freshness(created_at) < ___d:
+      name: "orders data is not stale"
+
+  # DISTRIBUTION PILLAR
+  # Order amounts should be between 0 and 1000.
+  # (There is one row that breaks this — your check should catch it.)
+  - values in (amount) between ___ and ___:
+      name: "order amounts within expected range"
+
+  # UNIQUENESS (you already know this one from Lab 1)
+  - duplicate_count(order_id) == ___:
+      name: "no duplicate order IDs"
