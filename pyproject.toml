@@ -1,0 +1,10 @@
+[project]
+name = "dq-observability-workshop"
+version = "0.1.0"
+requires-python = ">=3.9"
+dependencies = [
+    "dbt-core>=1.8",
+    "dbt-duckdb>=1.8",
+    "soda-core>=3.3,<4.0",
+    "soda-core-duckdb>=3.3,<4.0",
+]

@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+
+# uv
+.python-version
+
+# dbt
+dbt_project/target/
+dbt_project/logs/
+dbt_project/dbt_packages/
+dbt_project/.user.yml
+dbt_project/package-lock.yml
+
+# DuckDB
+*.duckdb
+
+# OS
+.DS_Store

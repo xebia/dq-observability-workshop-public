@@ -1,4 +1,3 @@
-data_sources:
-  workshop:
-    type: duckdb
-    path: dbt_project/dev.duckdb
+data_source workshop:
+  type: duckdb
+  path: dev.duckdb

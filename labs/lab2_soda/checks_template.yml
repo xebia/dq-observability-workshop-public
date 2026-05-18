@@ -29,9 +29,11 @@ checks for main.orders:
   # DISTRIBUTION PILLAR
   # Order amounts should be between 0 and 1000.
   # (There is one row that breaks this — your check should catch it.)
-  - values in (amount) between ___ and ___:
+  - invalid_count(amount) = 0:
+      valid min: ___
+      valid max: ___
       name: "order amounts within expected range"
 
   # UNIQUENESS (you already know this one from Lab 1)
-  - duplicate_count(order_id) == ___:
+  - duplicate_count(order_id) = ___:
       name: "no duplicate order IDs"

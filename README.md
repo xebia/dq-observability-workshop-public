@@ -4,36 +4,38 @@ Module 2: Practitioner (4 hours). Companion to the Xebia Foundation Data Quality
 
 ## Prerequisites
 
-- Python 3.9+
+- [uv](https://docs.astral.sh/uv/getting-started/installation/) — `curl -LsSf https://astral.sh/uv/install.sh | sh`
 - Git
+
+`uv` manages Python automatically — no separate Python installation needed.
 
 ## Setup (do this before the session)
 
-### 1. Clone this repo and enter the dbt project
+### 1. Clone this repo
 
 ```bash
 git clone <repo-url>
-cd dq-observability-workshop/dbt_project
+cd dq-observability-workshop
 ```
 
 ### 2. Install dependencies
 
 ```bash
-pip install dbt-core dbt-duckdb soda-core soda-duckdb
-dbt deps
+uv sync
+uv run dbt deps --project-dir dbt_project --profiles-dir dbt_project
 ```
 
 ### 3. Load the sample data and run the models
 
 ```bash
-dbt seed
-dbt run
+uv run dbt seed --project-dir dbt_project --profiles-dir dbt_project
+uv run dbt run --project-dir dbt_project --profiles-dir dbt_project
 ```
 
 ### 4. Verify setup
 
 ```bash
-dbt test
+uv run dbt test --project-dir dbt_project --profiles-dir dbt_project
 ```
 
 Most tests will **fail** before Lab 1 — that's expected. The sample data has deliberate quality problems.
