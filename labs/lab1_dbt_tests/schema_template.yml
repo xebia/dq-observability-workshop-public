@@ -6,8 +6,8 @@
 # When done, copy this file to:
 #   dbt_project/models/marts/schema.yml
 #
-# Then run from dbt_project/:
-#   dbt test --select orders
+# Then run from the repo root:
+#   uv run dbt test --select orders --project-dir dbt_project --profiles-dir dbt_project
 #
 # Hint: open seeds/raw_orders.csv and read the data.
 # =========================================================

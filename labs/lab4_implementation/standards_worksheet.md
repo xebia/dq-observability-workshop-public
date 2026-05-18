@@ -42,7 +42,7 @@ models:
 Write the SodaCL:
 
 ```yaml
-# Run with: soda scan -d workshop -c configuration.yml this_file.yml
+# Run with: uv run soda scan -d workshop -c labs/lab2_soda/configuration.yml this_file.yml
 checks for main.<table_name>:
   -
 ```

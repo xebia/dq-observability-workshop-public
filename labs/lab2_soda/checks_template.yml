@@ -4,7 +4,7 @@
 # and distribution (3 of the 5 observability pillars).
 #
 # Run from the repo root:
-#   soda scan -d workshop \
+#   uv run soda scan -d workshop \
 #     -c labs/lab2_soda/configuration.yml \
 #     labs/lab2_soda/checks_template.yml
 #
