@@ -1,6 +1,6 @@
 # Lab 1 Solution — dbt Tests
 #
-# Copy to: dbt_project/models/marts/schema.yml
+# Copy to: models/marts/schema.yml
 #
 # Issues caught:
 #   1. not_null on order_id          → catches the null order_id (row 4)

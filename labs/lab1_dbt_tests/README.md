@@ -18,10 +18,10 @@ There are three tiers of dbt tests:
 ## Your task
 
 1. Open `labs/lab1_dbt_tests/schema_template.yml` and fill in the blanks
-2. Copy the completed file to `dbt_project/models/marts/schema.yml`
-3. From the `dbt_project/` directory, run:
+2. Copy the completed file to `models/marts/schema.yml`
+3. From the repo root, run:
    ```bash
-   dbt test --select orders
+   uv run dbt test --select orders
    ```
 4. All 4 tests should **fail** on first run — that means your tests are finding real problems
 5. Do not fix the data. The goal is tests that accurately report what's broken.

@@ -7,11 +7,11 @@ __pycache__/
 .python-version
 
 # dbt
-dbt_project/target/
-dbt_project/logs/
-dbt_project/dbt_packages/
-dbt_project/.user.yml
-dbt_project/package-lock.yml
+target/
+logs/
+dbt_packages/
+.user.yml
+package-lock.yml
 
 # DuckDB
 *.duckdb

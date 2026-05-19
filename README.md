@@ -22,20 +22,34 @@ cd dq-observability-workshop
 
 ```bash
 uv sync
-uv run dbt deps --project-dir dbt_project --profiles-dir dbt_project
 ```
 
-### 3. Load the sample data and run the models
+### 3. Add the workshop dbt profile
 
 ```bash
-uv run dbt seed --project-dir dbt_project --profiles-dir dbt_project
-uv run dbt run --project-dir dbt_project --profiles-dir dbt_project
+mkdir -p ~/.dbt && cat >> ~/.dbt/profiles.yml << 'EOF'
+
+workshop:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "dev.duckdb"
+EOF
 ```
 
-### 4. Verify setup
+### 4. Install dbt packages and load data
 
 ```bash
-uv run dbt test --project-dir dbt_project --profiles-dir dbt_project
+uv run dbt deps
+uv run dbt seed
+uv run dbt run
+```
+
+### 5. Verify setup
+
+```bash
+uv run dbt test
 ```
 
 Most tests will **fail** before Lab 1 — that's expected. The sample data has deliberate quality problems.

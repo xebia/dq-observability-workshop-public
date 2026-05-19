@@ -69,8 +69,8 @@ Which approach (dbt test vs. Soda schema check) would have been more effective, 
 
 From the repo root, run:
 ```bash
-uv run dbt docs generate --project-dir dbt_project --profiles-dir dbt_project
-uv run dbt docs serve --project-dir dbt_project
+uv run dbt docs generate
+uv run dbt docs serve
 ```
 
 Navigate to the lineage graph for `stg_customers`. Does the live graph match your manual trace? What does it show that your hand-drawn version missed?

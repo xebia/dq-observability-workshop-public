@@ -20,7 +20,7 @@ dbt tests run at build time. Soda checks run on a schedule — watching live tab
 1. Open `labs/lab2_soda/checks_template.yml` and fill in the blanks
 2. Make sure the dbt project is built first:
    ```bash
-   uv run dbt seed --project-dir dbt_project --profiles-dir dbt_project && uv run dbt run --project-dir dbt_project --profiles-dir dbt_project
+   uv run dbt seed && uv run dbt run
    ```
 3. Run your checks from the repo root:
    ```bash
@@ -28,7 +28,7 @@ dbt tests run at build time. Soda checks run on a schedule — watching live tab
    ```
 4. Once checks run, **deliberately break one**:
    - Delete 3 rows from `dbt_project/seeds/raw_orders.csv`
-   - Run `uv run dbt seed --project-dir dbt_project --profiles-dir dbt_project && uv run dbt run --project-dir dbt_project --profiles-dir dbt_project` again
+   - Run `uv run dbt seed && uv run dbt run` again
    - Run `uv run soda scan` again — which check breaks?
 
 **Note:** The table name in Soda for DuckDB is `main.orders` (DuckDB's default schema is `main`).
