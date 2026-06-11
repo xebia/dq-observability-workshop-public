@@ -20,10 +20,12 @@ models:
       - name: status
         tests:
           - accepted_values:
-              values: ['placed', 'shipped', 'completed', 'returned']
+              arguments:
+                values: ['placed', 'shipped', 'completed', 'returned']
 
       - name: customer_id
         tests:
           - relationships:
-              to: ref('customers')
-              field: customer_id
+              arguments:
+                to: ref('customers')
+                field: customer_id

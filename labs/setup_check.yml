@@ -1,0 +1,11 @@
+# Pre-workshop smoke test.
+# Verifies that dbt built the database and Soda can read it.
+#
+# Run from the repo root:
+#   uv run soda scan -d workshop -c labs/lab2_soda/configuration.yml labs/setup_check.yml
+#
+# Expected: "1/1 checks PASSED"
+
+checks for main.orders:
+  - row_count > 0:
+      name: "setup OK — orders table exists and has data"

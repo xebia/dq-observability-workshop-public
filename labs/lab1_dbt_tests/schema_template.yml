@@ -4,7 +4,7 @@
 # hidden in the orders data.
 #
 # When done, copy this file to:
-#   dbt_project/models/marts/schema.yml
+#   models/marts/schema.yml
 #
 # Then run from the repo root:
 #   uv run dbt test --select orders
@@ -27,15 +27,17 @@ models:
       - name: status
         tests:
           - accepted_values:
-              values:
-                - ___________   # Issue 3: one row has an invalid status.
-                - ___________   # Valid statuses are: placed, shipped,
-                - ___________   #   completed, returned.
-                - ___________   # (do NOT include 'refunded')
+              arguments:
+                values:
+                  - ___________   # Issue 3: one row has an invalid status.
+                  - ___________   # Valid statuses are: placed, shipped,
+                  - ___________   #   completed, returned.
+                  - ___________   # (do NOT include 'refunded')
 
       - name: customer_id
         tests:
           - relationships:
-              to: ___________   # Issue 4: one order references a customer
-              field: ___________  # that doesn't exist. Which model holds
-                                  # valid customers? What field to join on?
+              arguments:
+                to: ___________   # Issue 4: one order references a customer
+                field: ___________  # that doesn't exist. Which model holds
+                                    # valid customers? What field to join on?

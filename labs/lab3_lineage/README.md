@@ -11,10 +11,10 @@ dbt's DAG shows the dependency chain from source to output. When a model breaks,
 
 Work in pairs using `blast_radius_worksheet.md`.
 
-**Optional (bonus):** run the following from `dbt_project/` to see the live lineage graph:
+**Optional (bonus):** run the following from the repo root to see the live lineage graph:
 ```bash
-dbt docs generate
-dbt docs serve
+uv run dbt docs generate
+uv run dbt docs serve
 ```
 
 ## Debrief questions

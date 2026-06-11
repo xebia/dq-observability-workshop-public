@@ -18,7 +18,7 @@ Take 2 standards from your Module 1 draft and convert them into runnable checks.
 Write the YAML:
 
 ```yaml
-# Copy to: dbt_project/models/marts/schema.yml
+# Copy to: models/marts/schema.yml
 models:
   - name:
     columns:

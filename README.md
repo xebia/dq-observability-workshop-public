@@ -4,7 +4,7 @@ Module 2: Practitioner (4 hours). Companion to the Xebia Foundation Data Quality
 
 ## Prerequisites
 
-- [uv](https://docs.astral.sh/uv/getting-started/installation/) — `curl -LsSf https://astral.sh/uv/install.sh | sh`
+- [uv](https://docs.astral.sh/uv/getting-started/installation/)
 - Git
 
 `uv` manages Python automatically — no separate Python installation needed.
@@ -24,21 +24,7 @@ cd dq-observability-workshop
 uv sync
 ```
 
-### 3. Add the workshop dbt profile
-
-```bash
-mkdir -p ~/.dbt && cat >> ~/.dbt/profiles.yml << 'EOF'
-
-workshop:
-  target: dev
-  outputs:
-    dev:
-      type: duckdb
-      path: "dev.duckdb"
-EOF
-```
-
-### 4. Install dbt packages and load data
+### 3. Install dbt packages and build the project
 
 ```bash
 uv run dbt deps
@@ -46,13 +32,17 @@ uv run dbt seed
 uv run dbt run
 ```
 
-### 5. Verify setup
+You should see `PASS=6` — all 6 models built. The repo includes `profiles.yml`, so no dbt profile setup is needed.
+
+### 4. Verify setup
 
 ```bash
-uv run dbt test
+uv run soda scan -d workshop -c labs/lab2_soda/configuration.yml labs/setup_check.yml
 ```
 
-Most tests will **fail** before Lab 1 — that's expected. The sample data has deliberate quality problems.
+You should see `1/1 checks PASSED`. You're ready.
+
+**Note:** the sample data contains deliberate quality problems — that's the point of the labs. Don't fix them.
 
 ## Labs
 

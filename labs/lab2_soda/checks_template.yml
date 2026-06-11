@@ -9,20 +9,21 @@
 #     labs/lab2_soda/checks_template.yml
 #
 # After checks pass: deliberately break one.
-# Delete 3 rows from dbt_project/seeds/raw_orders.csv,
-# then run: dbt seed && dbt run, then scan again.
+# Delete 3 rows from seeds/raw_orders.csv,
+# then run: uv run dbt seed && uv run dbt run, then scan again.
 # =========================================================
 
 checks for main.orders:
 
   # VOLUME PILLAR
-  # The orders table should have between 5 and 1000 rows.
+  # The orders table should have between 10 and 1000 rows.
   - row_count between ___ and ___:
       name: "orders table has expected row count"
 
   # FRESHNESS PILLAR
-  # The sample data goes back to April 2025 (~45 days ago).
-  # Set a threshold that the current data would pass.
+  # The newest order is always ~2 days old (dates are shifted
+  # at load time so the data never goes stale).
+  # Set a threshold in days that the current data would pass.
   - freshness(created_at) < ___d:
       name: "orders data is not stale"
 
