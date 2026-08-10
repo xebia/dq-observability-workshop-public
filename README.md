@@ -48,7 +48,7 @@ You should see `1/1 checks PASSED`. You're ready.
 
 | Lab | Topic | Duration | Folder |
 |-----|-------|----------|--------|
-| Lab 1 | dbt Tests | 65 min | `labs/lab1_dbt_tests/` |
+| Lab 1 | dbt Tests | 50 min | `labs/lab1_dbt_tests/` |
 | Lab 2 | Contracts & Semantic Layer | 40 min | `labs/lab2_contracts/` |
 | Lab 3 | Soda Checks | 65 min | `labs/lab3_soda/` |
 | Lab 4 | Lineage & Blast Radius | 35 min | `labs/lab4_lineage/` |

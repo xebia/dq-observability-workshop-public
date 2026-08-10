@@ -7,4 +7,5 @@ dependencies = [
     "dbt-duckdb>=1.8",
     "soda-core>=3.3,<4.0",
     "soda-core-duckdb>=3.3,<4.0",
+    "setuptools",
 ]

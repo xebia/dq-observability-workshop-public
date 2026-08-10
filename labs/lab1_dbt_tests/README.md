@@ -1,6 +1,6 @@
 # Lab 1: dbt Tests
 
-**Duration:** 65 min (50 min hands-on, 15 min debrief)
+**Duration:** 50 min (35 min hands-on, 15 min debrief)
 **Tools:** dbt, your terminal
 
 ## Background
