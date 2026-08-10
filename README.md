@@ -37,7 +37,7 @@ You should see `PASS=6` — all 6 models built. The repo includes `profiles.yml`
 ### 4. Verify setup
 
 ```bash
-uv run soda scan -d workshop -c labs/lab2_soda/configuration.yml labs/setup_check.yml
+uv run soda scan -d workshop -c labs/lab3_soda/configuration.yml labs/setup_check.yml
 ```
 
 You should see `1/1 checks PASSED`. You're ready.
@@ -49,9 +49,10 @@ You should see `1/1 checks PASSED`. You're ready.
 | Lab | Topic | Duration | Folder |
 |-----|-------|----------|--------|
 | Lab 1 | dbt Tests | 65 min | `labs/lab1_dbt_tests/` |
-| Lab 2 | Soda Checks | 65 min | `labs/lab2_soda/` |
-| Lab 3 | Lineage & Blast Radius | 35 min | `labs/lab3_lineage/` |
-| Lab 4 | Implementation Planning | 35 min | `labs/lab4_implementation/` |
+| Lab 2 | Contracts & Semantic Layer | 40 min | `labs/lab2_contracts/` |
+| Lab 3 | Soda Checks | 65 min | `labs/lab3_soda/` |
+| Lab 4 | Lineage & Blast Radius | 35 min | `labs/lab4_lineage/` |
+| — | Implementation Planning | 20 min | `labs/implementation_planning/` |
 
 Solutions are in `solutions/`. Try not to peek until you've given it a go.
 
