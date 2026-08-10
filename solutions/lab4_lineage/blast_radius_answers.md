@@ -1,4 +1,4 @@
-# Lab 3 Solution — Blast Radius Answers
+# Lab 4 Solution — Blast Radius Answers
 
 ## Scenario: `customer_id` renamed to `client_id` in `raw_customers`
 

@@ -2,7 +2,7 @@
 # Verifies that dbt built the database and Soda can read it.
 #
 # Run from the repo root:
-#   uv run soda scan -d workshop -c labs/lab2_soda/configuration.yml labs/setup_check.yml
+#   uv run soda scan -d workshop -c labs/lab3_soda/configuration.yml labs/setup_check.yml
 #
 # Expected: "1/1 checks PASSED"
 

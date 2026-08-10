@@ -1,4 +1,4 @@
-# Lab 2: Soda Checks
+# Lab 3: Soda Checks
 
 **Duration:** 65 min (50 min hands-on, 15 min debrief)
 **Tools:** Soda Core, your terminal
@@ -17,14 +17,14 @@ dbt tests run at build time. Soda checks run on a schedule — watching live tab
 
 ## Your task
 
-1. Open `labs/lab2_soda/checks_template.yml` and fill in the blanks
+1. Open `labs/lab3_soda/checks_template.yml` and fill in the blanks
 2. Make sure the dbt project is built first:
    ```bash
    uv run dbt seed && uv run dbt run
    ```
 3. Run your checks from the repo root:
    ```bash
-   uv run soda scan -d workshop -c labs/lab2_soda/configuration.yml labs/lab2_soda/checks_template.yml
+   uv run soda scan -d workshop -c labs/lab3_soda/configuration.yml labs/lab3_soda/checks_template.yml
    ```
 4. Once checks run, **deliberately break one**:
    - Delete 3 rows from `seeds/raw_orders.csv`

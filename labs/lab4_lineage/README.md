@@ -1,4 +1,4 @@
-# Lab 3: Lineage & Blast Radius
+# Lab 4: Lineage & Blast Radius
 
 **Duration:** 35 min (20 min pairs, 15 min group share)
 **Tools:** `blast_radius_worksheet.md` + optional: `dbt docs serve`

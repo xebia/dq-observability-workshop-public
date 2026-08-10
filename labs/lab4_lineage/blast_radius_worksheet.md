@@ -1,4 +1,4 @@
-# Lab 3: Blast Radius Worksheet
+# Lab 4: Blast Radius Worksheet
 
 Work in pairs. Use this worksheet — or open `dbt docs serve` for the live version.
 

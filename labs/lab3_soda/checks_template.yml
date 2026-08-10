@@ -1,12 +1,12 @@
-# Lab 2: Soda Checks — Fill in the Blanks
+# Lab 3: Soda Checks — Fill in the Blanks
 # =========================================================
 # Your task: write checks that cover freshness, volume,
 # and distribution (3 of the 5 observability pillars).
 #
 # Run from the repo root:
 #   uv run soda scan -d workshop \
-#     -c labs/lab2_soda/configuration.yml \
-#     labs/lab2_soda/checks_template.yml
+#     -c labs/lab3_soda/configuration.yml \
+#     labs/lab3_soda/checks_template.yml
 #
 # After checks pass: deliberately break one.
 # Delete 3 rows from seeds/raw_orders.csv,

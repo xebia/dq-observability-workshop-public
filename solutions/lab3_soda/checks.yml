@@ -1,9 +1,9 @@
-# Lab 2 Solution — Soda Checks
+# Lab 3 Solution — Soda Checks
 #
 # Run from repo root:
 #   uv run soda scan -d workshop \
-#     -c labs/lab2_soda/configuration.yml \
-#     solutions/lab2_soda/checks.yml
+#     -c labs/lab3_soda/configuration.yml \
+#     solutions/lab3_soda/checks.yml
 #
 # Expected results on the unmodified dataset:
 #   PASS  orders table has expected row count   (12 rows, between 10 and 1000)

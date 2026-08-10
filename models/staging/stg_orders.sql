@@ -1,4 +1,4 @@
--- The seed CSV has fixed dates. To keep the freshness exercise in Lab 2
+-- The seed CSV has fixed dates. To keep the freshness exercise in Lab 3
 -- working no matter when the workshop runs, we shift all dates forward
 -- so the newest order is always 2 days old. Relative spacing is preserved.
 
