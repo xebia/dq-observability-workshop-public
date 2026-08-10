@@ -1,6 +1,6 @@
 # Implementation Planning
 
-**Duration:** 35 min (20 min individual, 15 min pairs)
+**Duration:** 20 min (12 min individual, 8 min pairs)
 **Tools:** `standards_worksheet.md` — write actual YAML, not descriptions
 
 ## Your task
